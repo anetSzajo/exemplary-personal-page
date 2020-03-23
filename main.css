@@ -1,0 +1,88 @@
+.main-header {
+    background-color: rgb(133, 168, 157);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+}
+
+.main-header h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 3px;
+}
+
+.hamburger-button {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(42, 58, 53);
+    padding: 0;
+}
+
+.hamburger-button__bar {
+    background: rgb(42, 58, 53);
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 0.2rem;
+}
+
+.main-nav{
+    display: none;
+    width: 20%;
+    text-align: center;
+}
+
+.visible {
+    display: block;
+}
+
+.nav-bar__items {
+    background-color: rgb(133, 168, 157);
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 0.5rem;
+    height: 100vh;
+    margin: 0;
+}
+
+.nav-bar__items li{
+    padding: 1rem 0.5rem;;
+}
+.nav-bar__items li:hover,
+.nav-bar__items li:active {
+    background: rgb(196, 190, 190);
+}
+
+main {
+    display: inline-block;
+    background: linear-gradient(to-top, rgb(163, 194, 181), 10%, transparent), url("./images/flowers.jpg"), center/cover no-repeat border-box;
+}
+
+footer {
+    background-color: rgb(145, 143, 143);
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.3rem 1rem;
+}
+
+
+@media (min-width: 40rem) {
+    .hamburger-button {
+        display: none;
+    }
+    .main-nav {
+        display: inline-block;
+    }
+}
