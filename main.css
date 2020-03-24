@@ -1,3 +1,12 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: unset;
+}
+
 .main-header {
     background-color: rgb(133, 168, 157);
     color: white;
@@ -5,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    /* padding: 0.5rem 1rem; */
+    padding: 0.5rem 1rem;
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -53,14 +62,14 @@
     color: white;
     list-style: none;
     text-align: center;
-    padding: 0.5rem;
     height: 100%;
     margin: 0;
-    width: 100%;
+    padding-left: 0;
 }
 
 .nav-bar__items li{
-    padding: 1rem 3.5rem;;
+    padding: 1rem 2.5rem;
+    width: 4rem;
 }
 .nav-bar__items li:hover,
 .nav-bar__items li:active {
@@ -76,17 +85,21 @@ main {
 
 .main-content {
     padding: 1.5rem;
-    /* background: linear-gradient(to-right, rgb(111, 114, 113), 10%, transparent), url("./images/flowers.jpg"), center/cover no-repeat; */
     background-image: url("./images/flowers.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.8;
 }
 
+p {
+    font-size: 32px;
+}
+
 #photo{
     border-radius: 2rem;
     height: 19rem;
 }
+
 footer {
     background-color: rgb(145, 143, 143);
     color: white;
@@ -96,9 +109,6 @@ footer {
     padding: 0.3rem 1rem;
 }
 
-p{
-    font-size: 32px;
-}
 
 @media (min-width: 40rem) {
     .hamburger-button {
