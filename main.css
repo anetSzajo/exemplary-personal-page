@@ -91,16 +91,12 @@ main {
     opacity: 0.8;
 }
 
-p {
-    font-size: 32px;
-}
-
 #photo{
     border-radius: 2rem;
     height: 19rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 a:visited{

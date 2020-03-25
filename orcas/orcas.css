@@ -1,0 +1,32 @@
+.main-orca-content {
+    padding: 1.5rem;
+    background-color: rgb(245, 252, 248);
+    opacity: 0.8;
+}
+
+.orca-album{
+    display: grid;
+    grid-template-areas: "norwegian alaska"
+                        "norwegian alaska";
+    grid-gap: 2.5rem;
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.image-container{
+    max-width: 630px;
+    overflow: hidden;
+}
+
+#norwegian-orca__photo {
+    grid-area: norwegian;
+    
+}
+
+#alaska-orca__photo {
+    grid-area: alaska;
+    text-indent: -340px;
+}
