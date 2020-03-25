@@ -37,6 +37,10 @@
     padding-left: 0;
     margin-top: 2rem;
     text-align: center;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    padding: 1rem;
 }
 
 .organizations-list li {
@@ -49,11 +53,13 @@ h2 {
 }
 
 .logo-container{
-    width: 4rem;
     height: 8rem;
     margin: 1rem;
+    min-width: fit-content;
 }
 
 .logo-container img{
     height: 100%;
+    width: 150px;
 }
+
