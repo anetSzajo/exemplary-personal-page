@@ -5,15 +5,8 @@
 }
 
 .orca-album{
-    display: grid;
-    grid-template-areas: "norwegian alaska"
-                        "norwegian alaska";
-    grid-gap: 2.5rem;
-    grid-column: auto;
-    grid-row: auto;
-    justify-content: center;
+    display: block;
     text-align: center;
-    margin-top: 2.5rem;
 }
 
 .image-container{
@@ -37,15 +30,13 @@
     padding-left: 0;
     margin-top: 2rem;
     text-align: center;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
     padding: 1rem;
 }
 
 .organizations-list li {
-    display: inline-block;
+    display: block;
     margin-right: 6rem;
+    margin-top: 4rem;
 }
 
 h2 {
@@ -63,3 +54,12 @@ h2 {
     width: 150px;
 }
 
+@media (min-width: 40rem) {
+    .organizations-list li {
+        display: inline-block;
+    }
+    .orca-album div{
+        display: inline-block;
+        margin-right: 2px;
+    }
+}
