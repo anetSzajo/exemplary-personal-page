@@ -33,11 +33,9 @@
     padding: 1rem;
 }
 
-.organizations-list li {
-    display: block;
-    margin-right: 6rem;
-    margin-top: 4rem;
-}
+/* .organizations-list li {
+    width: 50%;
+} */
 
 h2 {
     margin-top: 3rem;
@@ -55,8 +53,10 @@ h2 {
 }
 
 @media (min-width: 40rem) {
-    .organizations-list li {
+    .organizations-list li{
         display: inline-block;
+        margin-right: 6rem;
+        margin-top: 4rem;
     }
     .orca-album div{
         display: inline-block;
