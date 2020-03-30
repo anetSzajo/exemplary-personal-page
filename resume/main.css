@@ -1,0 +1,261 @@
+body {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto auto 78px;
+    grid-template-areas:  "side-bar header" 
+                        "side-bar content"
+                        "side-bar footer";
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main-header{
+    display: grid;
+    grid-row: auto;
+    grid-template-areas: "name surname"
+                        "cv cv";
+    grid-column: header;
+    color: rgb(110, 109, 109);
+    padding: 2rem;
+    height: 5rem;
+    font: 600 38px 'Quicksand', sans-serif;
+    letter-spacing: 0.3rem;
+    margin-bottom: 0;
+}
+
+.main-header h1{
+    margin: 0;
+    padding: 0.8rem;
+    grid-area: name surname;
+    justify-content: start;
+}
+
+.main-header__name{
+    text-align: right;
+} 
+
+.main-header__surname{
+    color: rgb(228, 200, 184);
+}
+
+.main-header h2{
+    grid-area: cv;
+    height: auto;
+    margin: 0;
+    text-align:  center;
+    font: 400 28px 'Quicksand', sans-serif;
+}
+
+.content {
+    text-align: center;
+    font: 400 20px 'Quicksand', sans-serif;
+    padding: 1.5rem;
+}
+
+.content h1{
+    width: 100%;
+    border-bottom: 3px solid rgb(228, 200, 184);
+    line-height: 0.2rem;
+    margin: 10px 0 20px;
+    margin-top: 4rem;
+}
+
+.content h1 span {
+    background:white;
+    padding: 0 23px;
+    letter-spacing: 2px;
+    margin: 1px;
+}
+
+.content h2 {
+    margin-bottom: 0;
+    text-align: left;
+    margin-top: 3rem;
+}   
+
+.content h3 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.content p {
+    margin-bottom: 4rem;
+    margin-top: 0;
+    text-align: left;
+}
+
+.education-list{
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.interests-list{
+    list-style: none;
+    text-align: start;
+    padding: 1.5rem;
+    padding-left: 0;
+}
+
+.side-bar {
+    display: grid; 
+    grid-template-areas: "image"
+                        "info"
+                        "about-me"
+                        "skills"
+                        "interests";
+    background:rgb(228, 200, 184);
+    grid-area: side-bar;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.image-container {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    height: 228px;
+    width: 228px;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+#my-photo {
+    height: 100%;
+    width: 100%;
+    border-radius: 8rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.side-bar h1 {
+    width: 100%;
+    border-bottom: 3px solid white;
+    line-height: 0.2rem;
+    margin: 10px 0 20px;
+}
+
+.side-bar h1 span {
+    background: rgb(228, 200, 184);
+    padding: 0 23px;
+    letter-spacing: 2px;
+    margin: 1px;
+}
+
+.contact {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+}
+
+.info-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.3rem;
+    align-items: center;
+    padding: 0.8rem;
+}
+.info-item div {
+    margin-left: 0.5rem;
+}
+
+.svg-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+#phone-img,
+#email-img,
+#linkeid-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-me{
+    grid-area: about-me;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.about-me p {
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.skills-items,
+.languages {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.skill-item,
+.language {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.2rem;
+}
+
+.progressbar-dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progressbar-dots > div{
+    background-color: rgb(110, 109, 109);
+    border-radius: 20px;
+    padding: 2.5px;
+    margin: 6px;
+    width: 10px;
+    height: 10px;
+}
+
+.progressbar-dots .dot__filled {
+    background: white;
+}
+
+#progressbar-pol,
+#progressbar-eng {
+    background-color: rgb(110, 109, 109);
+    border-radius: 13px;
+    padding: 2.5px;
+    margin: 4px;
+    width: 157.5px;
+}
+
+#progressbar-pol > div {
+    background-color: white;
+    width: 99%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#progressbar-eng > div {
+    background-color: white;
+    width: 75%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+footer{
+    grid-area: footer;
+    font-size: 11px;
+    padding: 0.7rem;
+    text-align: center;
+    justify-content: center;
+    background:rgba(110, 109, 109, 0.22);
+}
