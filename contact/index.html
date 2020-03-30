@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Aneta Szajowka page</title>
         <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <header class="main-header">
@@ -24,7 +25,13 @@
                     <li><a href="index.html">Contact</a></li>
                 </ul>    
             </nav>
-            <div class="contact-form">
+            <div>
+                <form class="contact-form">
+                    <label for="nick">Nick: <input type="text" name="nick" placeholder="Your nick..."/></label>
+                    <label for="email">Email: <input type="email" name="email" placeholder="Your email address..."/></label>
+                    <label for="content"><input type="text" name="content" style="height: 200px" placeholder="Please write your message here :)"/></label>
+                    <button class="submit-btn">SUBMIT</button>
+                </form>
             </div>
         </main>
         <footer>© Copyright Aneta</footer>

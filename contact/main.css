@@ -1,0 +1,32 @@
+.nav-bar__items {
+    height: 100vh;
+}
+
+.contact-form {
+    text-align: justify;
+    display: block;
+    margin: 4rem;
+}
+
+input {
+    height: 2.5rem;
+    width: 13rem;
+    border: 2px solid rgb(133, 168, 157);
+    display: block;
+    margin: 5px;
+}
+
+input[name=content] {
+    margin-top: 33px;
+    width: 20rem;
+    height: 3rem;
+
+}
+
+.submit-btn{
+    height: 3rem;
+    width: 6rem;
+    border-radius: 8px;
+    background: rgb(133, 168, 157);
+    margin-top: 30px;
+}
