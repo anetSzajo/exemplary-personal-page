@@ -1,9 +1,13 @@
 var http = require('http');
+let posts = [];
+
 
 http.createServer(function (req, res) { 
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     let body = [];
+    res.setHeader('Content-type', 'application/json')
+
 
     if (req.method === 'POST') {
         req.on('error', (err) => {
@@ -13,14 +17,18 @@ http.createServer(function (req, res) {
           }).on('end', () => {
             body = Buffer.concat(body).toString();
             parsed = JSON.parse(body)
-            
-            
+            posts.push(parsed);
+            console.log(posts)
+
             // BEGINNING OF NEW STUFF
         
     })
     }
-    console.log(req.url);
-    console.log(req.method);
+    if (req.method === 'GET') {
+        console.log('get processing', posts)
+        res.write(JSON.stringify(posts))
+        res.statusCode = 400;
+    }
 
 
     res.end(); //end the response

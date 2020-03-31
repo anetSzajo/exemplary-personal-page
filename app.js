@@ -3,6 +3,7 @@
 const hamburgerBtn = document.querySelector(".hamburger-button");
 const navBar = document.querySelector('.main-nav');
 const submitBtn = document.querySelector('.submit-btn');
+const getBtn = document.querySelector('.get-btn');
 
 let nickInput = document.getElementById('nick');
 let emailInput = document.getElementById('email');
@@ -24,24 +25,47 @@ function sendHTTPRequest(method, url, data) {
         const data = xml.response;
         console.log(data);
     }
-    console.log(data)
+
     xml.send(JSON.stringify(data));
 }
 
 
-const sendRequest = () => {
-    sendHTTPRequest('POST', 'http://localhost:8080', {
-        'nick': nickInput.value,
-        'email': emailInput.value,
-        'message': messageContentInput.value
-    })
+const sendPosts = () => {
+
+    const xml = new XMLHttpRequest();
+    xml.open('POST', 'http://localhost:8080');
+
+    xml.responseType = 'json';
+    let formValue = {
+        
+    'nick': nickInput.value,
+    'email': emailInput.value,
+    'message': messageContentInput.value
+    }
+
+    xml.send(JSON.stringify(formValue));
+
 }
 
-submitBtn.addEventListener('click', sendRequest);
+const getPosts = () => {
+    console.log('once')
+    const xml = new XMLHttpRequest();
+    xml.open('GET', 'http://localhost:8080')
+  
+    xml.send()
+
+    xml.addEventListener('loadend', () => {
+        const response = (JSON.parse(xml.responseText))
+        console.log(response)
+    })
+
+    // xml.onloadend = (event) => {
+    //     const response = (JSON.parse(xml.responseText))
+    //     console.log(response)
+    // }
+
+}
 
 
-
-
-
-
-
+submitBtn.addEventListener('click', sendPosts);
+getBtn.addEventListener('click', getPosts);

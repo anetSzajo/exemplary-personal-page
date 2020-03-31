@@ -24,7 +24,8 @@ textarea[name=content] {
     border: 2px solid rgb(133, 168, 157)
 }
 
-.submit-btn{
+.submit-btn,
+.get-btn{
     height: 3rem;
     width: 6rem;
     border-radius: 8px;
@@ -34,7 +35,9 @@ textarea[name=content] {
 }
 
 .submit-btn:hover,
-.submit-btn:active {
+.submit-btn:active,
+.get-btn:hover,
+.get-btn:active {
     background: rgb(182, 179, 179);
 
 }
