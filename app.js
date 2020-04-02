@@ -9,6 +9,7 @@ let nickInput = document.getElementById('nick');
 let emailInput = document.getElementById('email');
 let messageContentInput = document.getElementById('message-content');
 
+let postsDiv = document.getElementById('posts');
 
 hamburgerBtn.addEventListener('click', () => {
     navBar.classList.toggle('visible');
@@ -44,28 +45,46 @@ const sendPosts = () => {
     }
 
     xml.send(JSON.stringify(formValue));
-
 }
 
-const getPosts = () => {
+
+
+
+const getPosts = () => new Promise((resolve, reject) => {
     console.log('once')
     const xml = new XMLHttpRequest();
     xml.open('GET', 'http://localhost:8080')
-  
     xml.send()
-
     xml.addEventListener('loadend', () => {
         const response = (JSON.parse(xml.responseText))
-        console.log(response)
+        resolve(response)
     })
 
-    // xml.onloadend = (event) => {
-    //     const response = (JSON.parse(xml.responseText))
-    //     console.log(response)
-    // }
-
-}
-
+    xml.addEventListener('error', () => {
+        reject('something went wrong')
+    })
+})
 
 submitBtn.addEventListener('click', sendPosts);
-getBtn.addEventListener('click', getPosts);
+getBtn.addEventListener('click', fetchAndRenderPosts);
+
+function fetchAndRenderPosts() {
+    getPosts().then(renderPosts, logError)
+}
+
+function renderPosts(posts) {
+    postsDiv.innerHTML = '';
+    for (const post of posts) {
+        postsDiv.insertAdjacentElement('afterbegin', generatePostDiv(post))
+    }
+}
+
+function generatePostDiv(post) {
+    let newPost = document.createElement("div");
+    newPost.innerHTML = `<h1>${post.nick} ${post.email} ${post.message}</h1>`;
+    return newPost;
+}
+
+function logError(error) {
+    console.log(error)
+}

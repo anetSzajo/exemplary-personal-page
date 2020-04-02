@@ -1,5 +1,5 @@
 var http = require('http');
-let posts = [];
+let posts = [{ nick: 'asd', email: '', message: 'ddd' } ];
 
 
 http.createServer(function (req, res) { 
