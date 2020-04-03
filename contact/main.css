@@ -41,3 +41,13 @@ textarea[name=content] {
     background: rgb(182, 179, 179);
 
 }
+
+.new-post{
+    margin: 2rem 4rem 2rem 4rem;
+}
+
+.new-post h1,
+.new-post h2 {
+    margin: 0.5rem 0;
+    font-size: large;
+}

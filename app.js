@@ -81,7 +81,8 @@ function renderPosts(posts) {
 
 function generatePostDiv(post) {
     let newPost = document.createElement("div");
-    newPost.innerHTML = `<h1>${post.nick} ${post.email} ${post.message}</h1>`;
+    newPost.className = "new-post";
+    newPost.innerHTML = `<h1>${post.nick}<h2>${post.email}</h2><p>${post.message}</p></h1>`;
     return newPost;
 }
 
